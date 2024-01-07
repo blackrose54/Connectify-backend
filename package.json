@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.ts"
+    "dev": "nodemon index.ts",
+    "build":"npx tsc && npm run copy-env ",
+    "copy-env": "cp .env ./dist/.env",
+    "start": "cd ./dist && node index.js"
   },
   "author": "",
   "license": "ISC",
